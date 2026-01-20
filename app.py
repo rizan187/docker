@@ -48,4 +48,3 @@ def create_item(name: str, description: str, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(item)
     return {"id": item.id, "name": item.name, "description": item.description}
- 
